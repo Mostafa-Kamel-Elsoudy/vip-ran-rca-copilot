@@ -1,0 +1,16 @@
+cell_name,alarm_name,severity,status
+LTE_NC_118_A,VSWR_HIGH,Critical,Active
+LTE_NC_113_A,RET_FAILURE,Minor,Active
+LTE_NC_109_B,TX_ISSUE,Major,Active
+LTE_NC_105_B,RET_FAILURE,Critical,Active
+LTE_NC_116_B,TX_ISSUE,Major,Active
+LTE_NC_112_C,SITE_DOWN,Minor,Active
+LTE_NC_111_B,VSWR_HIGH,Critical,Active
+LTE_NC_110_B,VSWR_HIGH,Critical,Active
+LTE_NC_109_A,TX_ISSUE,Major,Active
+LTE_NC_101_A,POWER_ALARM,Major,Active
+LTE_NC_114_A,SITE_DOWN,Major,Active
+LTE_NC_120_A,VSWR_HIGH,Minor,Active
+LTE_NC_107_C,VSWR_HIGH,Critical,Active
+LTE_NC_107_A,POWER_ALARM,Critical,Active
+LTE_NC_114_C,TX_ISSUE,Major,Active

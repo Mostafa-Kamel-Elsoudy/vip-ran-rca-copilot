@@ -1,0 +1,808 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>VIP RAN RCA Report</title>
+    <style>
+        body { font-family: Arial, sans-serif; margin: 32px; color: #222; }
+        h1 { color: #7b1b1b; }
+        .summary { background: #f5f5f5; padding: 16px; border-radius: 8px; }
+        table { border-collapse: collapse; width: 100%; margin-top: 20px; font-size: 13px; }
+        th, td { border: 1px solid #ddd; padding: 8px; vertical-align: top; }
+        th { background: #eee; }
+        .high { color: #9b0000; font-weight: bold; }
+    </style>
+</head>
+<body>
+    <h1>VIP RAN Complaint RCA Report</h1>
+    <p>Generated at: 2026-06-22 17:37</p>
+
+    <div class="summary">
+        <h2>Executive Summary</h2>
+        <p>Total complaints analyzed: <b>60</b></p>
+        <p>Top root cause: <b>No Clear RCA / Needs Trace Analysis</b></p>
+        <p>Most affected area: <b>Zamalek</b></p>
+    </div>
+
+    <h2>Root Cause Distribution</h2>
+    <table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th>Root Cause</th>
+      <th>Complaint Count</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>No Clear RCA / Needs Trace Analysis</td>
+      <td>22</td>
+    </tr>
+    <tr>
+      <td>Site / Alarm Issue</td>
+      <td>10</td>
+    </tr>
+    <tr>
+      <td>Coverage Issue</td>
+      <td>9</td>
+    </tr>
+    <tr>
+      <td>Handover / Mobility Issue</td>
+      <td>9</td>
+    </tr>
+    <tr>
+      <td>Interference Issue</td>
+      <td>8</td>
+    </tr>
+    <tr>
+      <td>Quality / Drop Issue</td>
+      <td>1</td>
+    </tr>
+    <tr>
+      <td>Congestion Issue</td>
+      <td>1</td>
+    </tr>
+  </tbody>
+</table>
+
+    <h2>Detailed RCA Results</h2>
+    <table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th>complaint_id</th>
+      <th>customer_segment</th>
+      <th>area</th>
+      <th>serving_cell</th>
+      <th>complaint_type</th>
+      <th>priority</th>
+      <th>predicted_root_cause</th>
+      <th>rule_confidence</th>
+      <th>rca_reasons</th>
+      <th>recommended_action</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>C-10001</td>
+      <td>Government VIP</td>
+      <td>Giza</td>
+      <td>LTE_NC_106_B</td>
+      <td>Poor coverage</td>
+      <td>High</td>
+      <td>Interference Issue</td>
+      <td>86.0%</td>
+      <td>Low SINR = 4.6 dB while RSRP is acceptable, indicating interference/noise.</td>
+      <td>Check interference, PCI planning, overshooting cells, and neighboring relations.</td>
+    </tr>
+    <tr>
+      <td>C-10002</td>
+      <td>VIP Individual</td>
+      <td>6th October</td>
+      <td>LTE_NC_118_B</td>
+      <td>WhatsApp call issue</td>
+      <td>Medium</td>
+      <td>No Clear RCA / Needs Trace Analysis</td>
+      <td>65.0%</td>
+      <td>No severe KPI degradation detected from the available data.</td>
+      <td>Perform deeper E2E trace analysis and validate with recent KPIs/drive test if complaint persists.</td>
+    </tr>
+    <tr>
+      <td>C-10003</td>
+      <td>Government VIP</td>
+      <td>Giza</td>
+      <td>LTE_NC_116_A</td>
+      <td>WhatsApp call issue</td>
+      <td>Medium</td>
+      <td>Quality / Drop Issue</td>
+      <td>80.0%</td>
+      <td>High drop rate = 5.4%.</td>
+      <td>Check radio link failures, coverage/interference, alarms, and trace logs.</td>
+    </tr>
+    <tr>
+      <td>C-10004</td>
+      <td>Government VIP</td>
+      <td>Zamalek</td>
+      <td>LTE_NC_114_A</td>
+      <td>Dropped call</td>
+      <td>Medium</td>
+      <td>Site / Alarm Issue</td>
+      <td>92.0%</td>
+      <td>Active alarm detected: SITE_DOWN</td>
+      <td>Check site health, hardware, power, transmission, and alarm clearance.</td>
+    </tr>
+    <tr>
+      <td>C-10005</td>
+      <td>Government VIP</td>
+      <td>6th October</td>
+      <td>LTE_NC_109_C</td>
+      <td>WhatsApp call issue</td>
+      <td>Medium</td>
+      <td>Coverage Issue</td>
+      <td>88.0%</td>
+      <td>Weak RSRP = -108.3 dBm, indicating poor coverage.</td>
+      <td>Check coverage footprint, antenna tilt/azimuth, site distance, and indoor penetration.</td>
+    </tr>
+    <tr>
+      <td>C-10006</td>
+      <td>Enterprise VIP</td>
+      <td>6th October</td>
+      <td>LTE_NC_102_B</td>
+      <td>Poor coverage</td>
+      <td>Medium</td>
+      <td>Handover / Mobility Issue</td>
+      <td>84.0%</td>
+      <td>Low handover success rate = 78.0%.</td>
+      <td>Check neighbor definitions, handover parameters, coverage overlap, and mobility traces.</td>
+    </tr>
+    <tr>
+      <td>C-10007</td>
+      <td>Government VIP</td>
+      <td>Giza</td>
+      <td>LTE_NC_105_B</td>
+      <td>No service</td>
+      <td>Medium</td>
+      <td>Site / Alarm Issue</td>
+      <td>92.0%</td>
+      <td>Active alarm detected: RET_FAILURE</td>
+      <td>Check site health, hardware, power, transmission, and alarm clearance.</td>
+    </tr>
+    <tr>
+      <td>C-10008</td>
+      <td>Enterprise VIP</td>
+      <td>6th October</td>
+      <td>LTE_NC_108_C</td>
+      <td>Dropped call</td>
+      <td>Medium</td>
+      <td>Interference Issue</td>
+      <td>86.0%</td>
+      <td>Low SINR = 1.0 dB while RSRP is acceptable, indicating interference/noise.</td>
+      <td>Check interference, PCI planning, overshooting cells, and neighboring relations.</td>
+    </tr>
+    <tr>
+      <td>C-10009</td>
+      <td>VIP Individual</td>
+      <td>Zamalek</td>
+      <td>LTE_NC_102_A</td>
+      <td>Dropped call</td>
+      <td>Low</td>
+      <td>No Clear RCA / Needs Trace Analysis</td>
+      <td>65.0%</td>
+      <td>No severe KPI degradation detected from the available data.</td>
+      <td>Perform deeper E2E trace analysis and validate with recent KPIs/drive test if complaint persists.</td>
+    </tr>
+    <tr>
+      <td>C-10010</td>
+      <td>Government VIP</td>
+      <td>Maadi</td>
+      <td>LTE_NC_108_A</td>
+      <td>Low throughput</td>
+      <td>High</td>
+      <td>No Clear RCA / Needs Trace Analysis</td>
+      <td>65.0%</td>
+      <td>No severe KPI degradation detected from the available data.</td>
+      <td>Perform deeper E2E trace analysis and validate with recent KPIs/drive test if complaint persists.</td>
+    </tr>
+    <tr>
+      <td>C-10011</td>
+      <td>Enterprise VIP</td>
+      <td>Giza</td>
+      <td>LTE_NC_110_C</td>
+      <td>WhatsApp call issue</td>
+      <td>Low</td>
+      <td>No Clear RCA / Needs Trace Analysis</td>
+      <td>65.0%</td>
+      <td>No severe KPI degradation detected from the available data.</td>
+      <td>Perform deeper E2E trace analysis and validate with recent KPIs/drive test if complaint persists.</td>
+    </tr>
+    <tr>
+      <td>C-10012</td>
+      <td>Enterprise VIP</td>
+      <td>6th October</td>
+      <td>LTE_NC_119_B</td>
+      <td>Poor coverage</td>
+      <td>Low</td>
+      <td>Interference Issue</td>
+      <td>86.0%</td>
+      <td>Low SINR = 1.0 dB while RSRP is acceptable, indicating interference/noise.</td>
+      <td>Check interference, PCI planning, overshooting cells, and neighboring relations.</td>
+    </tr>
+    <tr>
+      <td>C-10013</td>
+      <td>Enterprise VIP</td>
+      <td>6th October</td>
+      <td>LTE_NC_114_B</td>
+      <td>WhatsApp call issue</td>
+      <td>High</td>
+      <td>No Clear RCA / Needs Trace Analysis</td>
+      <td>65.0%</td>
+      <td>No severe KPI degradation detected from the available data.</td>
+      <td>Perform deeper E2E trace analysis and validate with recent KPIs/drive test if complaint persists.</td>
+    </tr>
+    <tr>
+      <td>C-10014</td>
+      <td>Enterprise VIP</td>
+      <td>Giza</td>
+      <td>LTE_NC_116_C</td>
+      <td>Poor coverage</td>
+      <td>Medium</td>
+      <td>Interference Issue</td>
+      <td>86.0%</td>
+      <td>Low SINR = 1.0 dB while RSRP is acceptable, indicating interference/noise.</td>
+      <td>Check interference, PCI planning, overshooting cells, and neighboring relations.</td>
+    </tr>
+    <tr>
+      <td>C-10015</td>
+      <td>Government VIP</td>
+      <td>Zamalek</td>
+      <td>LTE_NC_113_B</td>
+      <td>Low throughput</td>
+      <td>Medium</td>
+      <td>Interference Issue</td>
+      <td>86.0%</td>
+      <td>Low SINR = 3.3 dB while RSRP is acceptable, indicating interference/noise.</td>
+      <td>Check interference, PCI planning, overshooting cells, and neighboring relations.</td>
+    </tr>
+    <tr>
+      <td>C-10016</td>
+      <td>Enterprise VIP</td>
+      <td>New Cairo</td>
+      <td>LTE_NC_101_B</td>
+      <td>Poor coverage</td>
+      <td>High</td>
+      <td>Handover / Mobility Issue</td>
+      <td>84.0%</td>
+      <td>Low handover success rate = 88.4%.</td>
+      <td>Check neighbor definitions, handover parameters, coverage overlap, and mobility traces.</td>
+    </tr>
+    <tr>
+      <td>C-10017</td>
+      <td>Government VIP</td>
+      <td>6th October</td>
+      <td>LTE_NC_106_A</td>
+      <td>Dropped call</td>
+      <td>High</td>
+      <td>No Clear RCA / Needs Trace Analysis</td>
+      <td>65.0%</td>
+      <td>No severe KPI degradation detected from the available data.</td>
+      <td>Perform deeper E2E trace analysis and validate with recent KPIs/drive test if complaint persists.</td>
+    </tr>
+    <tr>
+      <td>C-10018</td>
+      <td>Government VIP</td>
+      <td>Zamalek</td>
+      <td>LTE_NC_104_A</td>
+      <td>Low throughput</td>
+      <td>Medium</td>
+      <td>No Clear RCA / Needs Trace Analysis</td>
+      <td>65.0%</td>
+      <td>No severe KPI degradation detected from the available data.</td>
+      <td>Perform deeper E2E trace analysis and validate with recent KPIs/drive test if complaint persists.</td>
+    </tr>
+    <tr>
+      <td>C-10019</td>
+      <td>VIP Individual</td>
+      <td>Giza</td>
+      <td>LTE_NC_106_B</td>
+      <td>Poor coverage</td>
+      <td>Medium</td>
+      <td>Interference Issue</td>
+      <td>86.0%</td>
+      <td>Low SINR = 4.6 dB while RSRP is acceptable, indicating interference/noise.</td>
+      <td>Check interference, PCI planning, overshooting cells, and neighboring relations.</td>
+    </tr>
+    <tr>
+      <td>C-10020</td>
+      <td>Enterprise VIP</td>
+      <td>Giza</td>
+      <td>LTE_NC_105_C</td>
+      <td>Dropped call</td>
+      <td>Low</td>
+      <td>Handover / Mobility Issue</td>
+      <td>84.0%</td>
+      <td>Low handover success rate = 89.9%.</td>
+      <td>Check neighbor definitions, handover parameters, coverage overlap, and mobility traces.</td>
+    </tr>
+    <tr>
+      <td>C-10021</td>
+      <td>VIP Individual</td>
+      <td>Nasr City</td>
+      <td>LTE_NC_107_B</td>
+      <td>High latency</td>
+      <td>Medium</td>
+      <td>Coverage Issue</td>
+      <td>88.0%</td>
+      <td>Weak RSRP = -109.1 dBm, indicating poor coverage.</td>
+      <td>Check coverage footprint, antenna tilt/azimuth, site distance, and indoor penetration.</td>
+    </tr>
+    <tr>
+      <td>C-10022</td>
+      <td>VIP Individual</td>
+      <td>Giza</td>
+      <td>LTE_NC_106_C</td>
+      <td>Dropped call</td>
+      <td>Low</td>
+      <td>No Clear RCA / Needs Trace Analysis</td>
+      <td>65.0%</td>
+      <td>No severe KPI degradation detected from the available data.</td>
+      <td>Perform deeper E2E trace analysis and validate with recent KPIs/drive test if complaint persists.</td>
+    </tr>
+    <tr>
+      <td>C-10023</td>
+      <td>Enterprise VIP</td>
+      <td>Maadi</td>
+      <td>LTE_NC_113_A</td>
+      <td>No service</td>
+      <td>High</td>
+      <td>Site / Alarm Issue</td>
+      <td>92.0%</td>
+      <td>Active alarm detected: RET_FAILURE</td>
+      <td>Check site health, hardware, power, transmission, and alarm clearance.</td>
+    </tr>
+    <tr>
+      <td>C-10024</td>
+      <td>VIP Individual</td>
+      <td>Zamalek</td>
+      <td>LTE_NC_101_A</td>
+      <td>Dropped call</td>
+      <td>Medium</td>
+      <td>Site / Alarm Issue</td>
+      <td>92.0%</td>
+      <td>Active alarm detected: POWER_ALARM</td>
+      <td>Check site health, hardware, power, transmission, and alarm clearance.</td>
+    </tr>
+    <tr>
+      <td>C-10025</td>
+      <td>Government VIP</td>
+      <td>Giza</td>
+      <td>LTE_NC_110_C</td>
+      <td>WhatsApp call issue</td>
+      <td>Low</td>
+      <td>No Clear RCA / Needs Trace Analysis</td>
+      <td>65.0%</td>
+      <td>No severe KPI degradation detected from the available data.</td>
+      <td>Perform deeper E2E trace analysis and validate with recent KPIs/drive test if complaint persists.</td>
+    </tr>
+    <tr>
+      <td>C-10026</td>
+      <td>VIP Individual</td>
+      <td>Zamalek</td>
+      <td>LTE_NC_114_A</td>
+      <td>WhatsApp call issue</td>
+      <td>High</td>
+      <td>Site / Alarm Issue</td>
+      <td>92.0%</td>
+      <td>Active alarm detected: SITE_DOWN</td>
+      <td>Check site health, hardware, power, transmission, and alarm clearance.</td>
+    </tr>
+    <tr>
+      <td>C-10027</td>
+      <td>Enterprise VIP</td>
+      <td>Nasr City</td>
+      <td>LTE_NC_119_C</td>
+      <td>Poor coverage</td>
+      <td>Low</td>
+      <td>Coverage Issue</td>
+      <td>88.0%</td>
+      <td>Weak RSRP = -113.7 dBm, indicating poor coverage.</td>
+      <td>Check coverage footprint, antenna tilt/azimuth, site distance, and indoor penetration.</td>
+    </tr>
+    <tr>
+      <td>C-10028</td>
+      <td>Government VIP</td>
+      <td>Nasr City</td>
+      <td>LTE_NC_117_B</td>
+      <td>WhatsApp call issue</td>
+      <td>Medium</td>
+      <td>Handover / Mobility Issue</td>
+      <td>84.0%</td>
+      <td>Low handover success rate = 89.5%.</td>
+      <td>Check neighbor definitions, handover parameters, coverage overlap, and mobility traces.</td>
+    </tr>
+    <tr>
+      <td>C-10029</td>
+      <td>VIP Individual</td>
+      <td>Zamalek</td>
+      <td>LTE_NC_113_C</td>
+      <td>Dropped call</td>
+      <td>High</td>
+      <td>No Clear RCA / Needs Trace Analysis</td>
+      <td>65.0%</td>
+      <td>No severe KPI degradation detected from the available data.</td>
+      <td>Perform deeper E2E trace analysis and validate with recent KPIs/drive test if complaint persists.</td>
+    </tr>
+    <tr>
+      <td>C-10030</td>
+      <td>Government VIP</td>
+      <td>Zamalek</td>
+      <td>LTE_NC_118_C</td>
+      <td>High latency</td>
+      <td>Medium</td>
+      <td>No Clear RCA / Needs Trace Analysis</td>
+      <td>65.0%</td>
+      <td>No severe KPI degradation detected from the available data.</td>
+      <td>Perform deeper E2E trace analysis and validate with recent KPIs/drive test if complaint persists.</td>
+    </tr>
+    <tr>
+      <td>C-10031</td>
+      <td>Enterprise VIP</td>
+      <td>Nasr City</td>
+      <td>LTE_NC_115_A</td>
+      <td>Poor coverage</td>
+      <td>Low</td>
+      <td>No Clear RCA / Needs Trace Analysis</td>
+      <td>65.0%</td>
+      <td>No severe KPI degradation detected from the available data.</td>
+      <td>Perform deeper E2E trace analysis and validate with recent KPIs/drive test if complaint persists.</td>
+    </tr>
+    <tr>
+      <td>C-10032</td>
+      <td>Government VIP</td>
+      <td>6th October</td>
+      <td>LTE_NC_110_A</td>
+      <td>High latency</td>
+      <td>Medium</td>
+      <td>Coverage Issue</td>
+      <td>88.0%</td>
+      <td>Weak RSRP = -114.9 dBm, indicating poor coverage.</td>
+      <td>Check coverage footprint, antenna tilt/azimuth, site distance, and indoor penetration.</td>
+    </tr>
+    <tr>
+      <td>C-10033</td>
+      <td>VIP Individual</td>
+      <td>Zamalek</td>
+      <td>LTE_NC_118_C</td>
+      <td>WhatsApp call issue</td>
+      <td>High</td>
+      <td>No Clear RCA / Needs Trace Analysis</td>
+      <td>65.0%</td>
+      <td>No severe KPI degradation detected from the available data.</td>
+      <td>Perform deeper E2E trace analysis and validate with recent KPIs/drive test if complaint persists.</td>
+    </tr>
+    <tr>
+      <td>C-10034</td>
+      <td>VIP Individual</td>
+      <td>Zamalek</td>
+      <td>LTE_NC_110_B</td>
+      <td>No service</td>
+      <td>Low</td>
+      <td>Site / Alarm Issue</td>
+      <td>92.0%</td>
+      <td>Active alarm detected: VSWR_HIGH</td>
+      <td>Check site health, hardware, power, transmission, and alarm clearance.</td>
+    </tr>
+    <tr>
+      <td>C-10035</td>
+      <td>Government VIP</td>
+      <td>Nasr City</td>
+      <td>LTE_NC_108_B</td>
+      <td>Dropped call</td>
+      <td>Low</td>
+      <td>No Clear RCA / Needs Trace Analysis</td>
+      <td>65.0%</td>
+      <td>No severe KPI degradation detected from the available data.</td>
+      <td>Perform deeper E2E trace analysis and validate with recent KPIs/drive test if complaint persists.</td>
+    </tr>
+    <tr>
+      <td>C-10036</td>
+      <td>Enterprise VIP</td>
+      <td>6th October</td>
+      <td>LTE_NC_102_B</td>
+      <td>High latency</td>
+      <td>Medium</td>
+      <td>Handover / Mobility Issue</td>
+      <td>84.0%</td>
+      <td>Low handover success rate = 78.0%.</td>
+      <td>Check neighbor definitions, handover parameters, coverage overlap, and mobility traces.</td>
+    </tr>
+    <tr>
+      <td>C-10037</td>
+      <td>Government VIP</td>
+      <td>Zamalek</td>
+      <td>LTE_NC_114_A</td>
+      <td>No service</td>
+      <td>High</td>
+      <td>Site / Alarm Issue</td>
+      <td>92.0%</td>
+      <td>Active alarm detected: SITE_DOWN</td>
+      <td>Check site health, hardware, power, transmission, and alarm clearance.</td>
+    </tr>
+    <tr>
+      <td>C-10038</td>
+      <td>Enterprise VIP</td>
+      <td>Nasr City</td>
+      <td>LTE_NC_104_C</td>
+      <td>No service</td>
+      <td>High</td>
+      <td>Congestion Issue</td>
+      <td>90.0%</td>
+      <td>High PRB utilization = 90.1% with low DL throughput = 0.5 Mbps.</td>
+      <td>Check congestion trend, load balancing, capacity expansion, and carrier utilization.</td>
+    </tr>
+    <tr>
+      <td>C-10039</td>
+      <td>Enterprise VIP</td>
+      <td>Zamalek</td>
+      <td>LTE_NC_105_A</td>
+      <td>No service</td>
+      <td>High</td>
+      <td>Handover / Mobility Issue</td>
+      <td>84.0%</td>
+      <td>Low handover success rate = 78.0%.</td>
+      <td>Check neighbor definitions, handover parameters, coverage overlap, and mobility traces.</td>
+    </tr>
+    <tr>
+      <td>C-10040</td>
+      <td>VIP Individual</td>
+      <td>Giza</td>
+      <td>LTE_NC_105_C</td>
+      <td>High latency</td>
+      <td>Medium</td>
+      <td>Handover / Mobility Issue</td>
+      <td>84.0%</td>
+      <td>Low handover success rate = 89.9%.</td>
+      <td>Check neighbor definitions, handover parameters, coverage overlap, and mobility traces.</td>
+    </tr>
+    <tr>
+      <td>C-10041</td>
+      <td>VIP Individual</td>
+      <td>Zamalek</td>
+      <td>LTE_NC_110_B</td>
+      <td>Dropped call</td>
+      <td>Low</td>
+      <td>Site / Alarm Issue</td>
+      <td>92.0%</td>
+      <td>Active alarm detected: VSWR_HIGH</td>
+      <td>Check site health, hardware, power, transmission, and alarm clearance.</td>
+    </tr>
+    <tr>
+      <td>C-10042</td>
+      <td>Government VIP</td>
+      <td>New Cairo</td>
+      <td>LTE_NC_103_B</td>
+      <td>Dropped call</td>
+      <td>Medium</td>
+      <td>No Clear RCA / Needs Trace Analysis</td>
+      <td>65.0%</td>
+      <td>No severe KPI degradation detected from the available data.</td>
+      <td>Perform deeper E2E trace analysis and validate with recent KPIs/drive test if complaint persists.</td>
+    </tr>
+    <tr>
+      <td>C-10043</td>
+      <td>Enterprise VIP</td>
+      <td>Zamalek</td>
+      <td>LTE_NC_113_B</td>
+      <td>Poor coverage</td>
+      <td>Medium</td>
+      <td>Interference Issue</td>
+      <td>86.0%</td>
+      <td>Low SINR = 3.3 dB while RSRP is acceptable, indicating interference/noise.</td>
+      <td>Check interference, PCI planning, overshooting cells, and neighboring relations.</td>
+    </tr>
+    <tr>
+      <td>C-10044</td>
+      <td>Government VIP</td>
+      <td>Giza</td>
+      <td>LTE_NC_115_B</td>
+      <td>No service</td>
+      <td>Medium</td>
+      <td>No Clear RCA / Needs Trace Analysis</td>
+      <td>65.0%</td>
+      <td>No severe KPI degradation detected from the available data.</td>
+      <td>Perform deeper E2E trace analysis and validate with recent KPIs/drive test if complaint persists.</td>
+    </tr>
+    <tr>
+      <td>C-10045</td>
+      <td>VIP Individual</td>
+      <td>Zamalek</td>
+      <td>LTE_NC_112_A</td>
+      <td>WhatsApp call issue</td>
+      <td>Low</td>
+      <td>Coverage Issue</td>
+      <td>88.0%</td>
+      <td>Weak RSRP = -113.0 dBm, indicating poor coverage.</td>
+      <td>Check coverage footprint, antenna tilt/azimuth, site distance, and indoor penetration.</td>
+    </tr>
+    <tr>
+      <td>C-10046</td>
+      <td>Government VIP</td>
+      <td>Nasr City</td>
+      <td>LTE_NC_102_C</td>
+      <td>WhatsApp call issue</td>
+      <td>Low</td>
+      <td>Coverage Issue</td>
+      <td>88.0%</td>
+      <td>Weak RSRP = -106.3 dBm, indicating poor coverage.</td>
+      <td>Check coverage footprint, antenna tilt/azimuth, site distance, and indoor penetration.</td>
+    </tr>
+    <tr>
+      <td>C-10047</td>
+      <td>VIP Individual</td>
+      <td>6th October</td>
+      <td>LTE_NC_106_A</td>
+      <td>No service</td>
+      <td>Low</td>
+      <td>No Clear RCA / Needs Trace Analysis</td>
+      <td>65.0%</td>
+      <td>No severe KPI degradation detected from the available data.</td>
+      <td>Perform deeper E2E trace analysis and validate with recent KPIs/drive test if complaint persists.</td>
+    </tr>
+    <tr>
+      <td>C-10048</td>
+      <td>VIP Individual</td>
+      <td>Maadi</td>
+      <td>LTE_NC_112_C</td>
+      <td>Low throughput</td>
+      <td>Low</td>
+      <td>Site / Alarm Issue</td>
+      <td>92.0%</td>
+      <td>Active alarm detected: SITE_DOWN</td>
+      <td>Check site health, hardware, power, transmission, and alarm clearance.</td>
+    </tr>
+    <tr>
+      <td>C-10049</td>
+      <td>Government VIP</td>
+      <td>Nasr City</td>
+      <td>LTE_NC_119_C</td>
+      <td>Dropped call</td>
+      <td>Medium</td>
+      <td>Coverage Issue</td>
+      <td>88.0%</td>
+      <td>Weak RSRP = -113.7 dBm, indicating poor coverage.</td>
+      <td>Check coverage footprint, antenna tilt/azimuth, site distance, and indoor penetration.</td>
+    </tr>
+    <tr>
+      <td>C-10050</td>
+      <td>VIP Individual</td>
+      <td>6th October</td>
+      <td>LTE_NC_102_B</td>
+      <td>WhatsApp call issue</td>
+      <td>Medium</td>
+      <td>Handover / Mobility Issue</td>
+      <td>84.0%</td>
+      <td>Low handover success rate = 78.0%.</td>
+      <td>Check neighbor definitions, handover parameters, coverage overlap, and mobility traces.</td>
+    </tr>
+    <tr>
+      <td>C-10051</td>
+      <td>Enterprise VIP</td>
+      <td>Zamalek</td>
+      <td>LTE_NC_111_B</td>
+      <td>High latency</td>
+      <td>Low</td>
+      <td>Site / Alarm Issue</td>
+      <td>92.0%</td>
+      <td>Active alarm detected: VSWR_HIGH</td>
+      <td>Check site health, hardware, power, transmission, and alarm clearance.</td>
+    </tr>
+    <tr>
+      <td>C-10052</td>
+      <td>VIP Individual</td>
+      <td>Zamalek</td>
+      <td>LTE_NC_112_A</td>
+      <td>High latency</td>
+      <td>Low</td>
+      <td>Coverage Issue</td>
+      <td>88.0%</td>
+      <td>Weak RSRP = -113.0 dBm, indicating poor coverage.</td>
+      <td>Check coverage footprint, antenna tilt/azimuth, site distance, and indoor penetration.</td>
+    </tr>
+    <tr>
+      <td>C-10053</td>
+      <td>VIP Individual</td>
+      <td>Nasr City</td>
+      <td>LTE_NC_119_A</td>
+      <td>High latency</td>
+      <td>Low</td>
+      <td>No Clear RCA / Needs Trace Analysis</td>
+      <td>65.0%</td>
+      <td>No severe KPI degradation detected from the available data.</td>
+      <td>Perform deeper E2E trace analysis and validate with recent KPIs/drive test if complaint persists.</td>
+    </tr>
+    <tr>
+      <td>C-10054</td>
+      <td>VIP Individual</td>
+      <td>6th October</td>
+      <td>LTE_NC_108_C</td>
+      <td>Low throughput</td>
+      <td>Medium</td>
+      <td>Interference Issue</td>
+      <td>86.0%</td>
+      <td>Low SINR = 1.0 dB while RSRP is acceptable, indicating interference/noise.</td>
+      <td>Check interference, PCI planning, overshooting cells, and neighboring relations.</td>
+    </tr>
+    <tr>
+      <td>C-10055</td>
+      <td>VIP Individual</td>
+      <td>6th October</td>
+      <td>LTE_NC_114_B</td>
+      <td>High latency</td>
+      <td>Medium</td>
+      <td>No Clear RCA / Needs Trace Analysis</td>
+      <td>65.0%</td>
+      <td>No severe KPI degradation detected from the available data.</td>
+      <td>Perform deeper E2E trace analysis and validate with recent KPIs/drive test if complaint persists.</td>
+    </tr>
+    <tr>
+      <td>C-10056</td>
+      <td>Enterprise VIP</td>
+      <td>6th October</td>
+      <td>LTE_NC_111_C</td>
+      <td>High latency</td>
+      <td>High</td>
+      <td>Handover / Mobility Issue</td>
+      <td>84.0%</td>
+      <td>Low handover success rate = 78.0%.</td>
+      <td>Check neighbor definitions, handover parameters, coverage overlap, and mobility traces.</td>
+    </tr>
+    <tr>
+      <td>C-10057</td>
+      <td>VIP Individual</td>
+      <td>Zamalek</td>
+      <td>LTE_NC_104_B</td>
+      <td>High latency</td>
+      <td>Medium</td>
+      <td>No Clear RCA / Needs Trace Analysis</td>
+      <td>65.0%</td>
+      <td>No severe KPI degradation detected from the available data.</td>
+      <td>Perform deeper E2E trace analysis and validate with recent KPIs/drive test if complaint persists.</td>
+    </tr>
+    <tr>
+      <td>C-10058</td>
+      <td>Government VIP</td>
+      <td>Maadi</td>
+      <td>LTE_NC_108_A</td>
+      <td>Low throughput</td>
+      <td>High</td>
+      <td>No Clear RCA / Needs Trace Analysis</td>
+      <td>65.0%</td>
+      <td>No severe KPI degradation detected from the available data.</td>
+      <td>Perform deeper E2E trace analysis and validate with recent KPIs/drive test if complaint persists.</td>
+    </tr>
+    <tr>
+      <td>C-10059</td>
+      <td>VIP Individual</td>
+      <td>Zamalek</td>
+      <td>LTE_NC_104_B</td>
+      <td>High latency</td>
+      <td>High</td>
+      <td>No Clear RCA / Needs Trace Analysis</td>
+      <td>65.0%</td>
+      <td>No severe KPI degradation detected from the available data.</td>
+      <td>Perform deeper E2E trace analysis and validate with recent KPIs/drive test if complaint persists.</td>
+    </tr>
+    <tr>
+      <td>C-10060</td>
+      <td>Enterprise VIP</td>
+      <td>6th October</td>
+      <td>LTE_NC_115_C</td>
+      <td>Dropped call</td>
+      <td>High</td>
+      <td>Coverage Issue</td>
+      <td>88.0%</td>
+      <td>Weak RSRP = -113.0 dBm, indicating poor coverage.</td>
+      <td>Check coverage footprint, antenna tilt/azimuth, site distance, and indoor penetration.</td>
+    </tr>
+  </tbody>
+</table>
+</body>
+</html>

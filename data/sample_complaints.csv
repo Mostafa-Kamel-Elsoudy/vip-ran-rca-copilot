@@ -1,0 +1,61 @@
+complaint_id,customer_segment,area,serving_cell,complaint_type,priority
+C-10001,Government VIP,Giza,LTE_NC_106_B,Poor coverage,High
+C-10002,VIP Individual,6th October,LTE_NC_118_B,WhatsApp call issue,Medium
+C-10003,Government VIP,Giza,LTE_NC_116_A,WhatsApp call issue,Medium
+C-10004,Government VIP,Zamalek,LTE_NC_114_A,Dropped call,Medium
+C-10005,Government VIP,6th October,LTE_NC_109_C,WhatsApp call issue,Medium
+C-10006,Enterprise VIP,6th October,LTE_NC_102_B,Poor coverage,Medium
+C-10007,Government VIP,Giza,LTE_NC_105_B,No service,Medium
+C-10008,Enterprise VIP,6th October,LTE_NC_108_C,Dropped call,Medium
+C-10009,VIP Individual,Zamalek,LTE_NC_102_A,Dropped call,Low
+C-10010,Government VIP,Maadi,LTE_NC_108_A,Low throughput,High
+C-10011,Enterprise VIP,Giza,LTE_NC_110_C,WhatsApp call issue,Low
+C-10012,Enterprise VIP,6th October,LTE_NC_119_B,Poor coverage,Low
+C-10013,Enterprise VIP,6th October,LTE_NC_114_B,WhatsApp call issue,High
+C-10014,Enterprise VIP,Giza,LTE_NC_116_C,Poor coverage,Medium
+C-10015,Government VIP,Zamalek,LTE_NC_113_B,Low throughput,Medium
+C-10016,Enterprise VIP,New Cairo,LTE_NC_101_B,Poor coverage,High
+C-10017,Government VIP,6th October,LTE_NC_106_A,Dropped call,High
+C-10018,Government VIP,Zamalek,LTE_NC_104_A,Low throughput,Medium
+C-10019,VIP Individual,Giza,LTE_NC_106_B,Poor coverage,Medium
+C-10020,Enterprise VIP,Giza,LTE_NC_105_C,Dropped call,Low
+C-10021,VIP Individual,Nasr City,LTE_NC_107_B,High latency,Medium
+C-10022,VIP Individual,Giza,LTE_NC_106_C,Dropped call,Low
+C-10023,Enterprise VIP,Maadi,LTE_NC_113_A,No service,High
+C-10024,VIP Individual,Zamalek,LTE_NC_101_A,Dropped call,Medium
+C-10025,Government VIP,Giza,LTE_NC_110_C,WhatsApp call issue,Low
+C-10026,VIP Individual,Zamalek,LTE_NC_114_A,WhatsApp call issue,High
+C-10027,Enterprise VIP,Nasr City,LTE_NC_119_C,Poor coverage,Low
+C-10028,Government VIP,Nasr City,LTE_NC_117_B,WhatsApp call issue,Medium
+C-10029,VIP Individual,Zamalek,LTE_NC_113_C,Dropped call,High
+C-10030,Government VIP,Zamalek,LTE_NC_118_C,High latency,Medium
+C-10031,Enterprise VIP,Nasr City,LTE_NC_115_A,Poor coverage,Low
+C-10032,Government VIP,6th October,LTE_NC_110_A,High latency,Medium
+C-10033,VIP Individual,Zamalek,LTE_NC_118_C,WhatsApp call issue,High
+C-10034,VIP Individual,Zamalek,LTE_NC_110_B,No service,Low
+C-10035,Government VIP,Nasr City,LTE_NC_108_B,Dropped call,Low
+C-10036,Enterprise VIP,6th October,LTE_NC_102_B,High latency,Medium
+C-10037,Government VIP,Zamalek,LTE_NC_114_A,No service,High
+C-10038,Enterprise VIP,Nasr City,LTE_NC_104_C,No service,High
+C-10039,Enterprise VIP,Zamalek,LTE_NC_105_A,No service,High
+C-10040,VIP Individual,Giza,LTE_NC_105_C,High latency,Medium
+C-10041,VIP Individual,Zamalek,LTE_NC_110_B,Dropped call,Low
+C-10042,Government VIP,New Cairo,LTE_NC_103_B,Dropped call,Medium
+C-10043,Enterprise VIP,Zamalek,LTE_NC_113_B,Poor coverage,Medium
+C-10044,Government VIP,Giza,LTE_NC_115_B,No service,Medium
+C-10045,VIP Individual,Zamalek,LTE_NC_112_A,WhatsApp call issue,Low
+C-10046,Government VIP,Nasr City,LTE_NC_102_C,WhatsApp call issue,Low
+C-10047,VIP Individual,6th October,LTE_NC_106_A,No service,Low
+C-10048,VIP Individual,Maadi,LTE_NC_112_C,Low throughput,Low
+C-10049,Government VIP,Nasr City,LTE_NC_119_C,Dropped call,Medium
+C-10050,VIP Individual,6th October,LTE_NC_102_B,WhatsApp call issue,Medium
+C-10051,Enterprise VIP,Zamalek,LTE_NC_111_B,High latency,Low
+C-10052,VIP Individual,Zamalek,LTE_NC_112_A,High latency,Low
+C-10053,VIP Individual,Nasr City,LTE_NC_119_A,High latency,Low
+C-10054,VIP Individual,6th October,LTE_NC_108_C,Low throughput,Medium
+C-10055,VIP Individual,6th October,LTE_NC_114_B,High latency,Medium
+C-10056,Enterprise VIP,6th October,LTE_NC_111_C,High latency,High
+C-10057,VIP Individual,Zamalek,LTE_NC_104_B,High latency,Medium
+C-10058,Government VIP,Maadi,LTE_NC_108_A,Low throughput,High
+C-10059,VIP Individual,Zamalek,LTE_NC_104_B,High latency,High
+C-10060,Enterprise VIP,6th October,LTE_NC_115_C,Dropped call,High
