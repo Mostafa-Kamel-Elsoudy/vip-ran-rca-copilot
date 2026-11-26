@@ -25,8 +25,10 @@ def train_rca_model(df: pd.DataFrame):
     if y.nunique() < 2:
         return None, None, "Not enough label diversity to train a model."
 
+    # Stratify only when every class has at least two rows; otherwise the split raises.
+    stratify = y if y.value_counts().min() >= 2 else None
     X_train, X_test, y_train, y_test = train_test_split(
-        X, y, test_size=0.25, random_state=42, stratify=y
+        X, y, test_size=0.25, random_state=42, stratify=stratify
     )
 
     model = RandomForestClassifier(n_estimators=200, random_state=42, class_weight="balanced")
